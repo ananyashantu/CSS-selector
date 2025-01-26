@@ -1,0 +1,88 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+h1{
+  border: 5px solid green; 
+}
+div p{
+  margin-top: 5px;
+  border: 7px solid purple;
+}
+#firstname{
+  background-color: seagreen;
+}
+.select{
+margin: 20px 20px;
+}
+p.select{
+  text-align: center;
+}
+p{
+  text-transform: uppercase;
+} 
+h1, p{
+  background-color: greenyellow;
+}
+div+p{
+  border: 7px solid gray;
+}/*selects p that is immediately after div*/
+a[target]{
+  background-color: skyblue;
+}/*attribute selector*/
+p[lang="us"]{
+  background-color: steelblue;
+}/* attribute with value selector*/
+[lang|=en]{
+  background-color: yellow;
+}/*selects element with lang attribute that has en or en-*/
+.image{
+  text-align: center;
+}
+[title~=tourist]{
+  border: 1px solid greenyellow;
+}/*attributr with tourist title is selected*/
+[class^="test"]{
+  background-color: salmon;
+}/*colors all elements with class that begins with test*/
+[class$="test"] {
+  background: slateblue;
+}/*colors all elements with class that ends with test*/
+div[class*="test"]{
+  background-color: grey;
+}
+/*
+.box {
+  border: 2px solid green;
+  background-color: beige;
+  font-family: monospace;
+  font-size: 20px;
+}
+
+.box > a {
+  color: green;
+}
+
+.box > a:hover {
+  color: white;
+  background-color: salmon;
+}this is before nesting
+*/
+.box {
+  margin-top: 20px;
+  border: 2px solid green;
+  background-color: beige;
+  font-family: monospace;
+  font-size: 20px;
+  & > a {
+    color: green;
+    &:hover {
+      color: white;
+      background-color: salmon;
+    }
+  }
+}
+p ~ ul {
+  background-color: gold;
+  border: 1px solid gray;
+}
